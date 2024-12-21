@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Alteração de Dados Cervejaria"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="IdCervejaria:" for="idCervejaria" />
+                    <h:inputText id="idCervejaria" value="#{cervejariaControle.tblcervejaria.idCervejaria}" title="IdCervejaria" required="true" requiredMessage="The IdCervejaria field is required."/>
+                    <h:outputLabel value="Cervejaria:" for="cervejaria" />
+                    <h:inputText id="cervejaria" value="#{cervejariaControle.tblcervejaria.cervejaria}" title="Cervejaria" required="true" requiredMessage="The Cervejaria field is required."/>
+                    <h:outputLabel value="Pais:" for="pais" />
+                    <h:inputText id="pais" value="#{cervejariaControle.tblcervejaria.pais}" title="Pais" required="true" requiredMessage="The Pais field is required."/>
+                </h:panelGrid>
+                <h:commandButton value="Update" action="#{cervejariaControle.update()}"/>
+                <h:button value="Voltar" outcome="exibeCervejaria"/>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>

@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
-    <!-- Define Persistence Unit -->
-    <persistence-unit name="my_persistence_unit">
-        
-    </persistence-unit>
+  <!-- Define Persistence Unit -->
+  <persistence-unit name="my_persistence_unit" transaction-type="JTA">
+    <jta-data-source>java:app/rt</jta-data-source>
+    <class>entidades.Cliente</class>
+    <class>entidades.Enderecos</class>
+    <class>entidades.TblCerveja</class>
+    <class>entidades.TblCervejaria</class>
+    <class>entidades.TblEntradaestoque</class>
+    <class>entidades.TblEstoque</class>
+    <class>entidades.TblListadedesejos</class>
+    <class>entidades.TblSaidaestoque</class>
+    <class>entidades.TblUsuario</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/routeexpress"/>
+      <property name="javax.persistence.jdbc.user" value="app"/>
+      <property name="javax.persistence.jdbc.password" value="app"/>
+      <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+    </properties>
+  </persistence-unit>
 </persistence>
