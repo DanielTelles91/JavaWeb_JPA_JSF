@@ -7,6 +7,9 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
+        <div style="float: right">
+            Usuário logado: #{sessaocontrole.usuario}
+        </div> 
         <f:view>
             <h:button value="Tela Inicial" outcome="index"/>
             <h:button value="Nova Cervejaria" outcome="insereCervejaria"/>
@@ -35,7 +38,13 @@
                         <f:facet name="header">
                             <h:outputText value="Action"/>
                         </f:facet>
-                        <h:commandLink value="update" action="#{cervejariaControle.Update(item)}"/> 
+                        <h:commandLink value="Atualizar" action="#{cervejariaControle.Update(item)}"/> 
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Action"/>
+                        </f:facet>
+                        <h:commandLink value="Excluir" action="#{cervejariaControle.delete(item)}" onclick= "return confirm('Você tem certeza que deseja excluir?')"/> 
                     </h:column>
                 </h:dataTable>
             </h:form>
