@@ -39,7 +39,6 @@ public class CervejariaControle implements Serializable {
     }
     
     public List<TblCervejaria> findAll() {
-        
         return this.tblCervejariaFacade.findAll();
     }
     

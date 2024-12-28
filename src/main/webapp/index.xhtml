@@ -8,21 +8,18 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-
-        <h:link value="Lista de Cervejaria" outcome="exibeCervejaria"/>
-
         <h:form>
             <p:messages />
             <h:panelGrid columns="2">
                 <h:outputLabel value="Login:"/>
                 <p:inputText value="#{sessaocontrole.usuario}"/>
                 <h:outputLabel value="Senha"/>
-                <p:inputText value="#{sessaocontrole.senha}"/>            
+                <p:password value="#{sessaocontrole.senha}"/>            
             </h:panelGrid>      
             <p:commandButton value="Login" action="#{sessaocontrole.login()}" 
-                process="@form" 
-                update="@form" 
-               />
+                             process="@form" 
+                             update="@form" 
+                             />
         </h:form>
 
     </h:body>
