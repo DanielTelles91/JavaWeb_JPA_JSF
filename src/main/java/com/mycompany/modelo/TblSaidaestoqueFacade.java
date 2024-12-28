@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package modelo;
+package com.mycompany.modelo;
 
-import entidades.TblEntradaestoque;
+import com.mycompany.entidades.TblSaidaestoque;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
 /**
  *
- * @author danie
+ * @author Daniel A. Telles
  */
 @Stateless
-public class TblEntradaestoqueFacade extends AbstractFacade<TblEntradaestoque> {
+public class TblSaidaestoqueFacade extends AbstractFacade<TblSaidaestoque> {
 
     @PersistenceContext(unitName = "my_persistence_unit")
     private EntityManager em;
@@ -24,8 +24,8 @@ public class TblEntradaestoqueFacade extends AbstractFacade<TblEntradaestoque> {
         return em;
     }
 
-    public TblEntradaestoqueFacade() {
-        super(TblEntradaestoque.class);
+    public TblSaidaestoqueFacade() {
+        super(TblSaidaestoque.class);
     }
     
 }

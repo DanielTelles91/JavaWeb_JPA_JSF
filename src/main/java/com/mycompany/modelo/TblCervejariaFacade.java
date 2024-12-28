@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package modelo;
+package com.mycompany.modelo;
 
-import entidades.TblEstoque;
+import com.mycompany.entidades.TblCervejaria;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
 /**
  *
- * @author danie
+ * @author Daniel A. Telles
  */
 @Stateless
-public class TblEstoqueFacade extends AbstractFacade<TblEstoque> {
+public class TblCervejariaFacade extends AbstractFacade<TblCervejaria> {
 
     @PersistenceContext(unitName = "my_persistence_unit")
     private EntityManager em;
@@ -24,8 +24,8 @@ public class TblEstoqueFacade extends AbstractFacade<TblEstoque> {
         return em;
     }
 
-    public TblEstoqueFacade() {
-        super(TblEstoque.class);
+    public TblCervejariaFacade() {
+        super(TblCervejaria.class);
     }
     
 }

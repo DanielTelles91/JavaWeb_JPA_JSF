@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package modelo;
+package com.mycompany.modelo;
 
 import jakarta.persistence.EntityManager;
 import java.util.List;
 
 /**
  *
- * @author danie
+ * @author Daniel A. Telles
  */
 public abstract class AbstractFacade<T> {
 
@@ -59,5 +59,5 @@ public abstract class AbstractFacade<T> {
         jakarta.persistence.Query q = getEntityManager().createQuery(cq);
         return ((Long) q.getSingleResult()).intValue();
     }
-    
+
 }

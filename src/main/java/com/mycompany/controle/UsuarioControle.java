@@ -2,19 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSF/JSFManagedBean.java to edit this template
  */
-package controle;
+package com.mycompany.controle;
 
-import entidades.TblUsuario;
+import com.mycompany.entidades.TblUsuario;
 import jakarta.ejb.EJB;
 import jakarta.inject.Named;
 import jakarta.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
-import modelo.TblUsuarioFacade;
+import com.mycompany.modelo.TblUsuarioFacade;
 
 /**
  *
- * @author danie
+ * @author Daniel A. Telles
  */
 @Named(value = "usuarioControle")
 @SessionScoped

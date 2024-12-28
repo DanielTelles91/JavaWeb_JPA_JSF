@@ -3,15 +3,15 @@
   <!-- Define Persistence Unit -->
   <persistence-unit name="my_persistence_unit" transaction-type="JTA">
     <jta-data-source>java:app/rt</jta-data-source>
-    <class>entidades.Cliente</class>
-    <class>entidades.Enderecos</class>
-    <class>entidades.TblCerveja</class>
-    <class>entidades.TblCervejaria</class>
-    <class>entidades.TblEntradaestoque</class>
-    <class>entidades.TblEstoque</class>
-    <class>entidades.TblListadedesejos</class>
-    <class>entidades.TblSaidaestoque</class>
-    <class>entidades.TblUsuario</class>
+    <class>br.com.javaweb.entidades.Cliente</class>
+    <class>br.com.javaweb.entidades.TblEstoque</class>
+    <class>br.com.javaweb.entidades.Enderecos</class>
+    <class>br.com.javaweb.entidades.TblCerveja</class>
+    <class>br.com.javaweb.entidades.TblCervejaria</class>
+    <class>br.com.javaweb.entidades.TblEntradaestoque</class>
+    <class>br.com.javaweb.entidades.TblListadedesejos</class>
+    <class>br.com.javaweb.entidades.TblSaidaestoque</class>
+    <class>br.com.javaweb.entidades.TblUsuario</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/routeexpress"/>
